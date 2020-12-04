@@ -1,0 +1,88 @@
+﻿<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <div class="jumbotron">
+            <h1>Bar Code and QR Scan</h1>
+            <div class="input-group input-group-lg">
+                <label>Date of Birth:</label>
+                <input type="date" id="dob" />
+            </div>
+            <button type="button" class="btn btn-default" onclick="alertCalculatedDOB()">Calculate</button>
+            <div class="container-fluid">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/home.js"></script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>AgeCalculator</title>
+    <!--System CSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!--User CSS-->
+    <link rel="stylesheet" type="text/css" href="css/_layout.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <!--System JS-->
+    <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/angular-validator.js"></script>
+    <script src="scripts/angular-validator-rules.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+
+    <!--User JS-->
+    <script src="js/_layout.js"></script><!--this line should be up from all of user defined js-->
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+</head>
+<body ng-app="AgeCalculator">
+    <div ng-controller="_layoutController">
+        <header id="GateKeeperHeader" style="display:block" class="navbar-fixed-top">
+            <div id="mySidebar" class="sidebar">
+                <a href="" class="closebtn" ng-click="closeNav()">×</a>
+                <a href="#/home" ng-click="closeNav()">Home</a>
+                <a href="#/about" ng-click="closeNav()">About</a>
+                <a href="#/services" ng-click="closeNav()">Services</a>
+                <a href="#/clients" ng-click="closeNav()">Clients</a>
+                <a href="#/contacts" ng-click="closeNav()">Contacts</a>
+                <span class="headerText">Bar Code and QR Scan</span>
+                <a class="nav-button glyphicon glyphicon-log-out logout" data-align="right" ng-click="LogOut()" data-icon="action" data-role="button"></a>
+            </div>
+        </header>
+        <div id="main">
+            <button class="openbtn" ng-click="openNav()">☰</button>
+        </div>
+    </div>
+    &nbsp;
+    <div ng-view id="paddingTop" class="paddingTop">
+    </div>
+</body>
+</html>
